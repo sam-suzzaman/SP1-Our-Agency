@@ -1,0 +1,178 @@
+/* ===============
+    Navbar
+==================*/
+@media screen and (max-width: 800px) {
+    .navWrapper {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .logo {
+        width: 100%;
+    }
+    .logo > i.fa-bars {
+        display: inline-block;
+    }
+    .menuWrapper {
+        width: 100%;
+    }
+    .menu {
+        width: 100%;
+        flex-direction: column;
+        align-items: start;
+    }
+    .menu li {
+        width: 100%;
+    }
+    .menu li a {
+        display: block;
+        padding: 01rem 0;
+        width: 100%;
+    }
+    .menu li a:last-child {
+        padding-bottom: 0;
+    }
+    .menu li:hover a {
+        color: #000;
+        padding-left: 0.5rem;
+        background-color: transparent;
+    }
+}
+@media (min-width: 801px) {
+    .menuWrapper {
+        height: auto !important;
+    }
+}
+
+/* ======================
+    Hero
+=========================*/
+@media (max-width: 800px) {
+    .title {
+        font-size: 3.5rem;
+    }
+}
+@media (max-width: 570px) {
+    .title {
+        font-size: 2.5rem;
+    }
+    .btn {
+        padding: 0.5rem 1.3rem;
+    }
+}
+@media (max-width: 360px) {
+    .title {
+        font-size: 2rem;
+    }
+    .btnWrapper {
+        flex-direction: column;
+        align-items: center;
+    }
+    .underline {
+        margin-bottom: 3rem;
+    }
+    .btn {
+        width: 150px;
+        margin: 0.5rem 0;
+    }
+}
+
+/* =================
+    Skill
+===================*/
+@media (max-width: 1120px) {
+    .skillWrapper {
+        padding: 5rem 2rem;
+    }
+    .card-wrapper {
+        grid-template-columns: repeat(3, 1fr);
+        grid-row-gap: 2rem;
+    }
+}
+@media (max-width: 900px) {
+    .card-wrapper {
+        grid-template-columns: repeat(2, 1fr);
+        grid-row-gap: 2rem;
+    }
+}
+@media (max-width: 650px) {
+    .card-wrapper {
+        grid-template-columns: 1fr;
+        grid-row-gap: 2rem;
+    }
+}
+
+/* ==============
+    Services
+=================*/
+@media (max-width: 800px) {
+    .serviceCardContainer {
+        grid-template-columns: 1fr;
+    }
+    .serviceCard:nth-of-type(3) {
+        order: 4;
+    }
+    .serviceCard:nth-of-type(4) {
+        order: 3;
+    }
+}
+
+/* ===============
+    Projects
+==================*/
+@media (max-width: 800px) {
+    .projectCardWrapper {
+        grid-template-columns: repeat(2, 1fr);
+        grid-row-gap: 2rem;
+    }
+}
+@media (max-width: 650px) {
+    .projectCardWrapper {
+        grid-template-columns: 1fr;
+        grid-row-gap: 2rem;
+    }
+}
+
+/* ===============
+    Filler/Callout
+==================*/
+@media (max-width: 645px) {
+    .fillerContent {
+        flex-direction: column;
+    }
+    .fillerContent > h2 {
+        margin-bottom: 2rem;
+    }
+}
+@media (max-width: 415px) {
+    .fillerContent > h2 {
+        font-size: 2rem;
+        margin-bottom: 1rem;
+    }
+}
+
+/* ================
+    Recent Post
+==================*/
+@media (max-width: 950px) {
+    .postContainer {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+@media (max-width: 630px) {
+    .postContainer {
+        grid-template-columns: 1fr;
+        grid-row-gap: 3rem;
+    }
+}
+
+/* ================
+    Footer
+==================*/
+@media (max-width: 700px) {
+    .fContent {
+        flex-direction: column;
+    }
+    .cpyRight {
+        margin-bottom: 1.5rem;
+    }
+}

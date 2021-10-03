@@ -1,0 +1,537 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+:root {
+    --primary-clr: #020887;
+    --secondary-clr: #38369a;
+    --third-clr: #7ca5b8;
+    --fourth-clr: #a9dbb8;
+    --fifth-clr: #c6ebbe;
+    --sixth-clr: #faed39;
+    --max-width: 1140px;
+    --width: 100vw;
+    --transition: all 0.3s;
+    --light-box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    --dark-box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+body {
+    font-family: "Roboto", sans-serif;
+    background-color: var(--fifth-clr);
+}
+/* =====================
+    Common CSS
+========================*/
+.sec-center {
+    width: var(--width);
+    max-width: var(--max-width);
+    margin: 0 auto;
+}
+ul {
+    list-style: none;
+    display: flex;
+}
+a {
+    text-decoration: none;
+}
+/* ==================
+    For Navbar
+=====================*/
+nav {
+    background-color: var(--fourth-clr);
+    box-shadow: var(--dark-box-shadow);
+}
+.navWrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 1rem;
+}
+.logo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.brand {
+    font-size: 2rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 700;
+    color: var(--primary-clr);
+}
+.logo > i.fa-bars {
+    font-size: 2rem;
+    color: var(--primary-clr);
+    cursor: pointer;
+    display: none;
+    transition: var(--transition);
+}
+.logo > i.fa-bars:hover {
+    transform: rotate(-90deg);
+}
+.menuWrapper {
+    height: 0;
+    overflow: hidden;
+    transition: var(--transition);
+    z-index: 99;
+}
+.menu {
+    justify-content: flex-end;
+    align-items: center;
+}
+.menu li a {
+    display: inline-block;
+    text-transform: capitalize;
+    font-size: 1.2rem;
+    color: var(--secondary-clr);
+    padding: 0.5rem 1rem;
+    transition: var(--transition);
+}
+.menu li:hover a {
+    color: #fff;
+    background-color: var(--primary-clr);
+    border-radius: 4px;
+}
+
+/* ======================
+    Hero
+=========================*/
+.hero {
+    min-height: 90vh;
+    width: 100%;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+        url(../assets/img/heroBG.jpg);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.title {
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 4.5rem;
+    color: var(--fourth-clr);
+    line-height: 1;
+}
+.clr {
+    color: #faed39;
+}
+.underline {
+    width: 90px;
+    height: 4px;
+    background-color: var(--fourth-clr);
+    margin-top: 10px;
+    margin: 0 auto;
+    margin-top: 0.75rem;
+    margin-bottom: 5rem;
+}
+.btnWrapper {
+    display: flex;
+    justify-content: center;
+}
+.btn {
+    outline: none;
+    border: 2px solid var(--sixth-clr);
+    padding: 0.75rem 2rem;
+    background-color: transparent;
+    border-radius: 2px;
+    font-size: 1.5rem;
+    letter-spacing: 1px;
+    font-weight: 500;
+    text-transform: capitalize;
+    text-align: center;
+    color: var(--third-clr);
+    cursor: pointer;
+    margin: 0 20px;
+    transition: var(--transition);
+}
+.btn:hover {
+    box-shadow: 0 10px 30px rgba(115, 156, 236, 0.2);
+}
+.btn1 {
+    color: #000;
+    background-color: var(--third-clr);
+    border: 2px solid var(--third-clr);
+}
+.btn2 {
+    border: 2px solid var(--third-clr);
+}
+.btn1:hover {
+    background-color: transparent;
+    border: 2px solid var(--fifth-clr);
+    color: #fff;
+}
+
+.btn2:hover {
+    background-color: var(--primary-clr);
+    border: 2px solid var(--primary-clr);
+    color: var(--sixth-clr);
+}
+
+/* ===============
+    For Skill
+==================*/
+.skillWrapper {
+    padding: 5rem 0;
+}
+.card-wrapper {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 1rem 2rem;
+}
+.card {
+    padding: 2rem 3rem;
+    text-align: center;
+    background-color: var(--third-clr);
+    border-radius: 4px;
+    transition: var(--transition);
+}
+.card:hover {
+    box-shadow: var(--dark-box-shadow);
+}
+.card > i {
+    font-size: 3rem;
+    color: var(--primary-clr);
+    opacity: 0.3;
+}
+.card-title {
+    font-size: 1.75rem;
+    color: var(--primary-clr);
+    text-transform: capitalize;
+    line-height: 1;
+    margin: 1rem 0;
+}
+.card-info {
+    color: var(--secondary-clr);
+    font-size: 1rem;
+    line-height: 1.4;
+}
+
+/* ====================
+    For Service
+=======================*/
+.serviceWrapper {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+        url(../assets/img/serviceBG.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    padding: 5rem 0;
+}
+.sec-title {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+.sec-title > h1 {
+    color: var(--third-clr);
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+.sec-title > .underline {
+    margin-bottom: 0;
+}
+.serviceCardContainer {
+    margin-top: 5rem;
+    padding: 0 2rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+.serviceCard {
+    background: linear-gradient(
+        rgba(255, 255, 255, 0.7),
+        rgba(255, 255, 255, 0.7)
+    );
+    padding: 3rem;
+    position: relative;
+    overflow: hidden;
+}
+.front-part {
+    text-align: center;
+    transition: var(--transition);
+}
+.front-part > i {
+    font-size: 4rem;
+    color: var(--primary-clr);
+    opacity: 0.8;
+}
+.front-part > h4 {
+    font-size: 2.5rem;
+    text-transform: capitalize;
+    color: var(--primary-clr);
+    line-height: 1;
+    margin: 1rem 0;
+}
+.back-part {
+    position: absolute;
+    bottom: -100%;
+    width: 75%;
+    height: 100%;
+    margin: 0 auto;
+    padding: 1.5rem 0;
+    transition: var(--transition);
+}
+.back-part > h4 {
+    font-size: 2rem;
+    text-transform: capitalize;
+    margin: 0.75rem 0 0.75rem;
+    color: var(--primary-clr);
+    opacity: 0.9;
+}
+.back-part > p {
+    font-size: 1rem;
+    text-align: justify;
+    line-height: 1.5;
+    color: var(--secondary-clr);
+    margin-bottom: 1rem;
+}
+.moreBtn {
+    padding: 0.5rem 1rem;
+    text-transform: capitalize;
+    letter-spacing: 1px;
+    font-size: 1rem;
+    outline: none;
+    border: 1px solid var(--secondary-clr);
+    background-color: transparent;
+    color: var(--secondary-clr);
+    cursor: pointer;
+    border-radius: 3rem;
+    transition: var(--transition);
+}
+.moreBtn:hover {
+    background-color: var(--secondary-clr);
+    color: var(--fourth-clr);
+    box-shadow: var(--dark-box-shadow);
+}
+/* adding crossing transition */
+.serviceCard:hover .front-part {
+    transform: translateY(-150%);
+}
+.serviceCard:hover .back-part {
+    bottom: 0;
+}
+.transBg {
+    background: linear-gradient(
+        rgba(255, 255, 255, 0.5),
+        rgba(255, 255, 255, 0.5)
+    );
+}
+
+/* ======================
+    For Project
+=========================*/
+.projectWrapper {
+    padding: 5rem 0;
+}
+.projectWrapper .sec-title > h1 {
+    color: var(--primary-clr);
+}
+.projectWrapper .sec-title .underline {
+    background-color: var(--primary-clr);
+}
+.projectCardWrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 2rem;
+    padding: 0 2rem;
+}
+.project-card {
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+}
+.project-card img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: var(--transition);
+}
+.project-card:hover img {
+    transform: scale(1.3);
+}
+.project-card .projectText {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    text-align: center;
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4));
+    opacity: 0;
+    transition: var(--transition);
+}
+.project-card:hover .projectText {
+    opacity: 1;
+}
+.projectText > h3 {
+    color: var(--sixth-clr);
+    font-size: 2rem;
+    text-transform: capitalize;
+    font-weight: 400;
+    margin-bottom: 0.75rem;
+}
+.projectText > p {
+    color: var(--fifth-clr);
+    font-size: 1rem;
+}
+
+/* ====================
+    Filler / Callout
+======================*/
+.filler {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+        url(../assets/img/calloutBg.jpg);
+    background-position: center center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.fillerContent {
+    padding: 5rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.fillerContent > h2 {
+    font-size: 3rem;
+    text-transform: capitalize;
+    color: var(--sixth-clr);
+    letter-spacing: 2px;
+    text-align: center;
+    line-height: 1;
+}
+.fillerContent .btnCall {
+    outline: none;
+    border: none;
+    padding: 0.5rem 1.5rem;
+    font-size: 1.5rem;
+    text-transform: capitalize;
+    background-color: transparent;
+    color: var(--sixth-clr);
+    border: 1px solid var(--third-clr);
+    cursor: pointer;
+    border-radius: 3px;
+    transition: var(--transition);
+}
+.fillerContent .btnCall:hover {
+    border: 1px solid var(--primary-clr);
+    background-color: var(--primary-clr);
+    padding: 0.6rem 1.7rem;
+    box-shadow: var(--light-box-shadow);
+}
+
+/* ====================
+    For Recent Post
+========================*/
+.recentPost {
+    padding: 4rem 0;
+}
+.recentPost .sec-title h1 {
+    color: var(--primary-clr);
+}
+.recentPost .sec-title .underline {
+    margin-bottom: 0;
+    background-color: var(--third-clr);
+}
+.postContainer {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 2rem;
+    grid-row-gap: 2rem;
+    padding: 2rem 2rem;
+}
+.postCard {
+    background-color: #fff;
+    border-radius: 5px;
+    transition: var(--transition);
+}
+.postCard:hover {
+    box-shadow: var(--dark-box-shadow);
+}
+.postCard img {
+    width: 100%;
+    /* height: 100%; */
+    object-fit: cover;
+    border-radius: 5px 5px 0 0;
+}
+.postCard h3 {
+    line-height: 1;
+    font-size: 1.5rem;
+    text-transform: capitalize;
+    color: var(--primary-clr);
+    opacity: 0.9;
+    margin: 1.5rem 0 1rem;
+    text-align: center;
+}
+.postCard p {
+    line-height: 1.4;
+    color: var(--secondary-clr);
+    opacity: 0.9;
+    text-align: justify;
+    font-size: 1rem;
+    padding: 0 0.75rem;
+}
+.postCard .postBtn {
+    display: block;
+    width: 70%;
+    max-width: 150px;
+    margin: 0 auto;
+    padding: 0.5rem 1.3rem;
+    outline: none;
+    border: 1px solid var(--fourth-clr);
+    background-color: var(--fourth-clr);
+    font-size: 1.2rem;
+    text-transform: capitalize;
+    box-shadow: var(--dark-box-shadow);
+    cursor: pointer;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    transition: var(--transition);
+}
+.postCard .postBtn:hover {
+    background-color: transparent;
+    border: none;
+}
+
+/* ==============
+    Footer
+=================*/
+.footer {
+    background-color: var(--primary-clr);
+    padding: 2rem 0;
+}
+.fContent {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2rem;
+}
+.cpyRight {
+    text-align: center;
+    color: #fff;
+    font-size: 1.5rem;
+    text-transform: capitalize;
+    font-weight: 400;
+}
+.fMenu li a {
+    color: #fff;
+    font-size: 1.5rem;
+    margin: 0 1rem;
+    transition: var(--transition);
+}
+.fMenu li:hover a {
+    color: var(--sixth-clr);
+}
